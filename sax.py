@@ -143,7 +143,7 @@ class SAX(object):
         if not numSubsequences:
             numSubsequences = 20
         self.windowSize = int(len(x)/numSubsequences)
-        if not overlappingFraction:
+        if not overlappingFraction and overlappingFraction != 0:
             overlappingFraction = 0.9
         overlap = self.windowSize*overlappingFraction
         moveSize = int(self.windowSize - overlap)
